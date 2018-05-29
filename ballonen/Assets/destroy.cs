@@ -67,7 +67,7 @@ public class destroy : MonoBehaviour {
         cans.SetActive(true);
 
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(0);
 
     }

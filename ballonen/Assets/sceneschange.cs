@@ -18,6 +18,7 @@ public class sceneschange : MonoBehaviour {
 
     public void buttonstart(int scenechange)
     {
+        spwning.speed = 100;
         SceneManager.LoadScene(scenechange);
     }
 }

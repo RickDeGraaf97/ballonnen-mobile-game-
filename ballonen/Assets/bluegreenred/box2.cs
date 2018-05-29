@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 public class box2 : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData)
@@ -9,6 +10,8 @@ public class box2 : MonoBehaviour, IPointerClickHandler
         Destroy(gameObject);
         spwning.speed = 0;
         highscorescore.Reset();
+        hoioi();
+        
     }
 
     private void Update()
@@ -19,4 +22,19 @@ public class box2 : MonoBehaviour, IPointerClickHandler
         }
     }
 
+
+
+    void hoioi() { SceneManager.LoadScene(0); }
+
+    IEnumerator hoi()
+    {
+        //highscore
+
+        
+
+
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
+
+    }
 }
