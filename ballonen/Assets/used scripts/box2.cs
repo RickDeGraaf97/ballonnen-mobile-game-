@@ -5,13 +5,18 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 public class box2 : MonoBehaviour, IPointerClickHandler
 {
+    destroy destroyscript;
+    private void Start()
+    {
+        destroyscript = FindObjectOfType<destroy>();
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         Destroy(gameObject);
         spwning.speed = 0;
         highscorescore.Reset();
-        hoioi();
-        
+        destroyscript.hoistart();
+
     }
 
     private void Update()
@@ -24,17 +29,4 @@ public class box2 : MonoBehaviour, IPointerClickHandler
 
 
 
-    void hoioi() { SceneManager.LoadScene(0); }
-
-    IEnumerator hoi()
-    {
-        //highscore
-
-        
-
-
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(0);
-
-    }
 }

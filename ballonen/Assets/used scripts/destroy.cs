@@ -60,6 +60,11 @@ public class destroy : MonoBehaviour {
             Debug.Log("reddestoy");
         }
     }
+
+    public void hoistart()
+    {
+        StartCoroutine(hoi());
+    }
     IEnumerator hoi()
     {
         //highscore
